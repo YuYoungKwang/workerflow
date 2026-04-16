@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="board-title">Agent Board</h1>
+  </header>
+  <main id="kanban">
+    <div class="column" data-status="TODO">
+      <h2>TODO <span class="count" id="count-todo">0</span></h2>
+      <div class="cards"></div>
+    </div>
+    <div class="column" data-status="IN_PROGRESS">
+      <h2>IN PROGRESS <span class="count" id="count-in_progress">0</span></h2>
+      <div class="cards"></div>
+    </div>
+    <div class="column" data-status="REVIEW">
+      <h2>REVIEW <span class="count" id="count-review">0</span></h2>
+      <div class="cards"></div>
+    </div>
+    <div class="column" data-status="BLOCKED">
+      <h2>BLOCKED <span class="count" id="count-blocked">0</span></h2>
+      <div class="cards"></div>
+    </div>
+    <div class="column" data-status="DONE">
+      <h2>DONE <span class="count" id="count-done">0</span></h2>
+      <div class="cards"></div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

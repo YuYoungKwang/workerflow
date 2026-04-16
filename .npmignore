@@ -1,0 +1,8 @@
+src/
+web/
+*.ts
+tsconfig.json
+.gitignore
+README.ko.md
+sample.json
+node_modules/
