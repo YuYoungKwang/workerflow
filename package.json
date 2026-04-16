@@ -1,10 +1,11 @@
 {
   "name": "workerflow-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JSON-based task visualization CLI with local web view",
   "type": "module",
   "files": [
     "dist",
+    "web",
     "README.md",
     "LICENSE"
   ],

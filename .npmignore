@@ -1,5 +1,4 @@
 src/
-web/
 *.ts
 tsconfig.json
 .gitignore
