@@ -150,3 +150,48 @@ main {
 
 [data-status="DONE"] .count { background: #dafbe1; color: #22863a; }
 [data-status="DONE"] { border-top: 3px solid #22863a; }
+
+/* Toast notifications */
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toast {
+  background: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s forwards;
+}
+
+.toast.success { background: #22c55e; }
+.toast.info { background: #3b82f6; }
+.toast.warning { background: #f59e0b; }
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Card highlight on update */
+.card.updated {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  0%, 100% { background: transparent; }
+  50% { background: #fef08a; }
+}

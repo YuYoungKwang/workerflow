@@ -75,12 +75,24 @@ function startWatcher(path: string): void {
 
   chokidar.watch(path, { persistent: true }).on('change', () => {
     try {
+      const oldData = currentData;
       const content = readFileSync(path, 'utf-8');
       currentData = JSON.parse(content);
-      console.log('File changed, reloading...');
+      
+      const oldTasks = oldData?.tasks || [];
+      const newTasks = currentData.tasks || [];
+      let changed = 0;
+      for (const t of newTasks) {
+        const old = oldTasks.find(o => o.id === t.id);
+        if (!old || old.status !== t.status || old.title !== t.title) {
+          changed++;
+        }
+      }
+      
+      console.log(`[${new Date().toLocaleTimeString()}] File reloaded: ${changed} task(s) changed`);
       broadcastEvent();
     } catch (err) {
-      console.error('Error reloading file:', err);
+      console.error(`[${new Date().toLocaleTimeString()}] Error reloading file: ${err}`);
     }
   });
 }
