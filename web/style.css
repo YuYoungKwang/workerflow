@@ -86,9 +86,54 @@ main {
   margin-bottom: 8px;
 }
 
-.card .meta {
-  font-size: 11px;
-  color: #959da5;
+/* Summary */
+.summary {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.stat {
+  padding: 0.25rem 0.5rem;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Agent badge */
+.badge {
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  margin-right: 0.25rem;
+}
+
+.badge.agent {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+/* Priority badges */
+.badge.priority-low { background: #e8f5e9; color: #2e7d32; }
+.badge.priority-medium { background: #fff3e0; color: #ef6c00; }
+.badge.priority-high { background: #ffebee; color: #c62828; }
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.tag {
+  padding: 0.0625rem 0.25rem;
+  font-size: 0.7rem;
+  background: #f5f5f5;
+  color: #666;
+  border-radius: 2px;
 }
 
 [data-status="TODO"] .count { background: #ffe3e3; color: #cb2431; }

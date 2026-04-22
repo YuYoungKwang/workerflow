@@ -1,11 +1,20 @@
 {
   "title": "Sample Project",
+  "summary": {
+    "total": 5,
+    "completed": 1,
+    "inProgress": 1,
+    "blocked": 1
+  },
   "tasks": [
     {
       "id": "1",
       "title": "Setup project structure",
       "status": "DONE",
       "description": "Initialize Node.js project with TypeScript",
+      "agent": "@dev",
+      "priority": "high",
+      "tags": ["setup", "infrastructure"],
       "createdAt": "2026-04-16T10:00:00Z",
       "updatedAt": "2026-04-16T10:30:00Z"
     },
@@ -14,6 +23,9 @@
       "title": "Implement CLI commands",
       "status": "IN_PROGRESS",
       "description": "Add --input and --stdin options",
+      "agent": "@dev",
+      "priority": "high",
+      "tags": ["cli", "feature"],
       "createdAt": "2026-04-16T10:30:00Z",
       "updatedAt": "2026-04-16T11:00:00Z"
     },
@@ -22,6 +34,8 @@
       "title": "Build web kanban view",
       "status": "TODO",
       "description": "Create HTML/CSS for board layout",
+      "priority": "medium",
+      "tags": ["frontend", "ui"],
       "createdAt": "2026-04-16T11:00:00Z",
       "updatedAt": "2026-04-16T11:00:00Z"
     },
@@ -30,6 +44,9 @@
       "title": "Add data validation",
       "status": "REVIEW",
       "description": "Verify JSON schema matches spec",
+      "agent": "@reviewer",
+      "priority": "medium",
+      "tags": ["validation", "testing"],
       "createdAt": "2026-04-16T11:30:00Z",
       "updatedAt": "2026-04-16T12:00:00Z"
     },
@@ -38,6 +55,8 @@
       "title": "Fix port conflict issue",
       "status": "BLOCKED",
       "description": "Handle when port 3030 is in use",
+      "priority": "low",
+      "tags": ["bug", "infrastructure"],
       "createdAt": "2026-04-16T12:00:00Z",
       "updatedAt": "2026-04-16T12:00:00Z"
     }

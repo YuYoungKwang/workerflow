@@ -32,6 +32,17 @@ cat <json-file> | workerflow-cli view --stdin
 workerflow-cli view --input <json-file> --port 8080
 ```
 
+## Watch Mode
+
+```bash
+# Watch file changes and auto-reload
+workerflow-cli view --input sample.json --watch
+# or
+workerflow-cli view -i sample.json -w
+
+# With auto-refresh in browser (no manual reload needed)
+```
+
 ## JSON Format
 
 ```json
@@ -50,9 +61,35 @@ workerflow-cli view --input <json-file> --port 8080
 }
 ```
 
+## Extended JSON Format
+
+```json
+{
+  "title": "Project Name",
+  "summary": {
+    "total": 10,
+    "completed": 3,
+    "inProgress": 2,
+    "blocked": 1
+  },
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Task Title",
+      "status": "TODO",
+      "description": "Task description",
+      "agent": "@username",
+      "priority": "high",
+      "tags": ["frontend", "bug"],
+      "createdAt": "2026-04-16T10:00:00Z",
+      "updatedAt": "2026-04-16T12:00:00Z"
+    }
+  ]
+}
+```
+
 ## License
 
 MIT
 
 ---
-
